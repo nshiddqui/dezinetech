@@ -1,57 +1,85 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- * @var \App\View\AppView $this
- */
-
-$cakeDescription = 'CakePHP: the rapid development php framework';
-?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
-    </title>
+    <title><?= $this->fetch('title') ?> | <?= PROJECT ?></title>
+
     <?= $this->Html->meta('icon') ?>
 
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <!-- Google Font: Source Sans Pro -->
+    <?= $this->Html->css('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback') ?>
 
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake']) ?>
+    <!-- Font Awesome -->
+    <?= $this->Html->css('/plugins/fontawesome-free/css/all.min') ?>
+
+    <?= $this->fetch('css') ?>
+
+    <!-- Theme style -->
+    <?= $this->Html->css('adminlte.min') ?>
 
     <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
+    
 </head>
-<body>
-    <nav class="top-nav">
-        <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <?= $this->element('sidebar') ?>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0"><?= $this->fetch('title') ?></h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><?= $this->Html->link(PROJECT, '/') ?></li>
+                                <li class="breadcrumb-item active"><?= $this->fetch('title') ?></li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+                <?= $this->Flash->render() ?>
+                <?= $this->fetch('content') ?>
+            </div>
+            <!-- /.content -->
         </div>
-        <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a>
-        </div>
-    </nav>
-    <main class="main">
-        <div class="container">
-            <?= $this->Flash->render() ?>
-            <?= $this->fetch('content') ?>
-        </div>
-    </main>
-    <footer>
-    </footer>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="float-right d-none d-sm-inline">
+                Version 1.0
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2022 <?= $this->Html->link(PROJECT, '/') ?>.</strong> All rights reserved.
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <?= $this->Html->script('/plugins/jquery/jquery.min') ?>
+
+    <!-- Bootstrap 4 -->
+    <?= $this->Html->script('/plugins/bootstrap/js/bootstrap.bundle.min') ?>
+
+    <!-- AdminLTE App -->
+    <?= $this->Html->script('adminlte.min') ?>
+
+    <?= $this->fetch('script') ?>
 </body>
+
 </html>

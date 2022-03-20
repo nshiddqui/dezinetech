@@ -12,7 +12,7 @@ $this->Form->setTemplates([
             <?= $this->Html->link(PROJECT, '/', ['class' => 'h1']) ?>
         </div>
         <div class="card-body">
-            <div class="login-box-msg text-danger"><?= $this->Flash->render() ?></div>
+            <?= $this->Flash->render() ?>
 
             <?= $this->Form->create() ?>
             <div class="input-group mb-3">

@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c44389fdc120808e5123da8b47a4a4ff214ac98d',
+        'reference' => '93cc50a94fd82560e100bd29d566f8b06085df78',
         'name' => 'cakephp/app',
         'dev' => true,
     ),
@@ -25,7 +25,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c44389fdc120808e5123da8b47a4a4ff214ac98d',
+            'reference' => '93cc50a94fd82560e100bd29d566f8b06085df78',
             'dev_requirement' => false,
         ),
         'cakephp/authentication' => array(
@@ -414,7 +414,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => '43b12bf62daa9de307c3986568413d28ccd28e3b',
+            'reference' => 'fd27384b59c88278cff0cab899199b720b095fd2',
             'dev_requirement' => false,
         ),
         'orno/di' => array(

@@ -929,12 +929,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nshiddqui/cakephp-datatables.git",
-                "reference": "43b12bf62daa9de307c3986568413d28ccd28e3b"
+                "reference": "fd27384b59c88278cff0cab899199b720b095fd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nshiddqui/cakephp-datatables/zipball/43b12bf62daa9de307c3986568413d28ccd28e3b",
-                "reference": "43b12bf62daa9de307c3986568413d28ccd28e3b",
+                "url": "https://api.github.com/repos/nshiddqui/cakephp-datatables/zipball/fd27384b59c88278cff0cab899199b720b095fd2",
+                "reference": "fd27384b59c88278cff0cab899199b720b095fd2",
                 "shasum": ""
             },
             "require": {
@@ -984,7 +984,7 @@
             "support": {
                 "source": "https://github.com/allanmcarvalho/cakephp-datatables"
             },
-            "time": "2022-03-20T12:36:59+00:00"
+            "time": "2022-03-20T16:48:31+00:00"
         },
         {
             "name": "psr/container",
